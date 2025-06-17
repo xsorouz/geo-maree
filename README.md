@@ -1,2 +1,2 @@
-# geo-maree
-geo-maree est un démonstrateur technique d’une mini-plateforme géospatiale inspirée des enjeux du SHOM. Il combine des microservices Docker pour exposer des données de marées et de courants littoraux via API REST (FastAPI) et serveur cartographique (GeoServer), avec stockage PostGIS, monitoring Prometheus/Grafana et visualisation WMS/WFS. Ce projet illustre une architecture modulaire de type CD2S (Centre de Données et de Services), pensée pour la valorisation de données maritimes.
+# datastack-core
+`datastack-core` est une **stack open-source modulaire** conçue pour centraliser tous les outils d’un projet data moderne. Une fois lancée, elle permet à **plusieurs projets** de fonctionner **sans recréer les services à chaque fois**.

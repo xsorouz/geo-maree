@@ -1,0 +1,31 @@
+# ============================================================================
+# 📊 prometheus.yml — Configuration du monitoring Prometheus
+# Objectif : surveiller les services clés de la stack géospatiale SHOM
+# Emplacement : prometheus/prometheus.yml
+# ============================================================================
+
+global:
+  scrape_interval: 15s      # Fréquence de scrutation des cibles
+  evaluation_interval: 15s  # Fréquence d'évaluation des règles (non utilisé ici)
+
+scrape_configs:
+  # ✅ Prometheus se surveille lui-même
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # 🔧 (Exemple futur) PostgreSQL - nécessite un exporter
+  # - job_name: 'postgresql'
+  #   static_configs:
+  #     - targets: ['shom-postgres-exporter:9187']
+
+  # 🔧 (Exemple futur) FastAPI - monitoring via middleware Prometheus
+  # Requiert l'ajout d'un routeur ou middleware spécifique dans main.py
+  # - job_name: 'fastapi'
+  #   static_configs:
+  #     - targets: ['shom-fastapi:8000']
+
+  # 🔧 (Exemple futur) GeoServer - métriques personnalisées à exposer manuellement
+  # - job_name: 'geoserver'
+  #   static_configs:
+  #     - targets: ['shom-geoserver:8080']

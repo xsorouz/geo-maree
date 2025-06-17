@@ -1,0 +1,26 @@
+# ============================================================================
+# 📦 Dépendances Python pour le service shom-fastapi
+# Objectif : construire une API REST pour les données marées et courants
+# Basé sur FastAPI, PostgreSQL, et divers utilitaires analytiques
+# ============================================================================
+
+# ⚙️ Framework principal
+fastapi==0.110.2
+uvicorn[standard]==0.29.0
+
+# 🐘 Connexion à PostgreSQL
+psycopg2-binary==2.9.9
+
+# 📁 Accès aux variables d’environnement via .env
+python-dotenv==1.0.1
+pydantic==2.7.1       # Modèles de validation (déjà inclus avec FastAPI)
+
+# 📊 Traitement de données (optionnels selon usage)
+pandas==2.1.4
+numpy==1.24.4
+
+# 📜 Requêtes HTTP (optionnel si récupération distante)
+requests==2.31.0
+
+# 🛠️ Loggage évolué
+loguru==0.7.2
